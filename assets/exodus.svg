@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="katman_1" data-name="katman 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 997.5 205.3">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Adsız_degrade_3);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#Adsız_degrade_4);
+      }
+
+      .cls-3 {
+        fill: url(#Adsız_degrade_2);
+      }
+
+      .cls-4 {
+        fill: url(#Adsız_degrade_5);
+      }
+
+      .cls-7 {
+        mask: url(#mask);
+      }
+
+      .cls-5 {
+        fill: url(#Adsız_degrade);
+      }
+
+      .cls-6 {
+        fill: #1f2033;
+      }
+    </style>
+    <linearGradient id="Adsız_degrade" data-name="Adsız degrade" x1="178.9" y1="-9.8" x2="120.4" y2="232.2" gradientTransform="translate(0 208.3) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b46f9"/>
+      <stop offset="1" stop-color="#bbfbe0"/>
+    </linearGradient>
+    <linearGradient id="Adsız_degrade_2" data-name="Adsız degrade 2" x1="84.1" y1="-32.7" x2="25.6" y2="209.3" gradientTransform="translate(0 208.3) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b46f9"/>
+      <stop offset="1" stop-color="#bbfbe0"/>
+    </linearGradient>
+    <linearGradient id="Adsız_degrade_3" data-name="Adsız degrade 3" x1="178.9" y1="-9.8" x2="120.4" y2="232.2" gradientTransform="translate(0 208.3) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b46f9"/>
+      <stop offset="1" stop-color="#bbfbe0"/>
+    </linearGradient>
+    <linearGradient id="Adsız_degrade_4" data-name="Adsız degrade 4" x1="84.1" y1="-32.7" x2="25.6" y2="209.3" gradientTransform="translate(0 208.3) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0b46f9"/>
+      <stop offset="1" stop-color="#bbfbe0"/>
+    </linearGradient>
+    <mask id="mask" x="0" y="0" width="201.6" height="205.3" maskUnits="userSpaceOnUse">
+      <g id="mask0_1661_261" data-name="mask0 1661 261">
+        <path class="cls-1" d="M201.6,57.3L114.2,0v32.1l56.1,36.5-6.6,20.9h-49.5v26.6h49.5l6.6,20.9-56.1,36.5v32.1l87.4-57.2-14.3-45.4,14.3-45.4Z"/>
+        <path class="cls-2" d="M38.1,115.9h49.3v-26.6h-49.5l-6.4-20.9,55.9-36.5V0L0,57.3l14.3,45.4L0,148.2l87.6,57.2v-32.1l-56.1-36.5,6.6-20.9Z"/>
+      </g>
+    </mask>
+    <linearGradient id="Adsız_degrade_5" data-name="Adsız degrade 5" x1="17.1" y1="167.7" x2="118.5" y2="92" gradientTransform="translate(0 208.3) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset=".1" stop-color="#8952ff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#dabdff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path class="cls-5" d="M201.6,57.3L114.2,0v32.1l56.1,36.5-6.6,20.9h-49.5v26.6h49.5l6.6,20.9-56.1,36.5v32.1l87.4-57.2-14.3-45.4,14.3-45.4Z"/>
+  <path class="cls-3" d="M38.1,115.9h49.3v-26.6h-49.5l-6.4-20.9,55.9-36.5V0L0,57.3l14.3,45.4L0,148.2l87.6,57.2v-32.1l-56.1-36.5,6.6-20.9Z"/>
+  <g class="cls-7">
+    <rect class="cls-4" x=".1" width="200.2" height="205.3"/>
+  </g>
+  <path class="cls-6" d="M375.6,56.5v18h-82.7v18.4h70.3v18h-70.3v20.2h82.7v18h-104V56.5h104Z"/>
+  <path class="cls-6" d="M387.4,148.9l47.5-46.8-46.2-45.6h29.2l32.6,33,31.2-33h27.3l-46,45.6,47.5,46.8h-29.5l-30.6-34-34.9,34h-28.3Z"/>
+  <path class="cls-6" d="M567.5,56.5c38.5,0,61.7,19.3,61.7,46.2s-23.2,46.2-61.7,46.2-61.5-19.3-61.5-46.2,23-46.2,61.5-46.2ZM567.5,73.7c-23.2,0-40.2,11.7-40.2,28.9s17.1,28.9,40.2,28.9,40.4-11.7,40.4-28.9-17.1-28.9-40.4-28.9Z"/>
+  <path class="cls-6" d="M706,56.5c30.8,0,49.4,17.1,49.4,46.1s-18.5,46.3-49.2,46.3h-62.5V56.5h62.2ZM733.6,102.5c0-18.1-10.8-28.1-30.3-28.1h-38.4v56.5h38.4c19.5,0,30.3-10.2,30.3-28.4Z"/>
+  <path class="cls-6" d="M825.3,148.9c-32.5,0-57.1-14.7-57.1-41.9v-50.5h21.2v48.5c0,16.8,17.5,24.6,35.9,24.6s36-7.6,36-24.6v-48.5h21.1v50.5c0,27.2-24.5,41.9-57.1,41.9Z"/>
+  <path class="cls-6" d="M941.9,148.9c-17.4,0-36.3-3.2-49.6-9.2l7-17.1c12,5.5,28.5,9,43.3,9s33-3.6,33-10-5-6.7-15.5-8.3l-29.7-3.2c-22.9-3.1-34.1-11-34.1-24.9s18.9-28.5,46.8-28.5,39.8,3.1,51.7,8.4l-7,16.3c-11.7-4.8-31.6-7.2-45.7-7.2s-24,3.3-24,9.5,4.8,6.4,17,8.2l28.9,3.2c22.1,3.1,33.5,10.6,33.5,25.2s-24.3,28.8-55.6,28.8Z"/>
+</svg>
